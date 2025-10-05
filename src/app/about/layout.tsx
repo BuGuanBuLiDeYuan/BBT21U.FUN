@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "关于《四论BBT》- BBT21U.fun",
     description: "关于BBT的话题，这4篇文章已经讲得差不多了。文章自由开放，欢迎大家随意处置。",
-    url: "/about",
+    url: "https://bbt21u.fun/about",
     siteName: "BBT21U.fun",
     images: [
       {
@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     ],
     locale: "zh_CN",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://bbt21u.fun/about",
   },
   twitter: {
     card: "summary_large_image",

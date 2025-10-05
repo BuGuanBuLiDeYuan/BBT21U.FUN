@@ -239,6 +239,9 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       section: "智能金融",
       tags: ["BBT", "比特币", "AI", "智能经济", "加密货币"],
     },
+    alternates: {
+      canonical: `https://bbt21u.fun/articles/${article.id}`,
+    },
     twitter: {
       card: "summary_large_image",
       title: `${article.title} - BBT21U.fun`,

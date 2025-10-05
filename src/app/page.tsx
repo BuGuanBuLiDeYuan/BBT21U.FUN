@@ -4,11 +4,11 @@ import Logo21U from "@/components/Logo21U";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "四论BBT：智能金融时代的数字智慧 - BBT21U.fun",
+  title: "四论BBT：没有BBT是你的可惜，持有BBT是你的幸运 - BBT单价21U再见",
   description: "探索BBT的崛起与TradeFi智能经济的未来。从数字黄金到数字智慧，从预测力稀缺到智能货币经济，BBT如何重新定义价值？为什么建议你持有至少2100个BBT？",
   keywords: [
-    "四论BBT", "BBT", "BlindBox Token", "数字智慧", "智能金融", "AI预测", 
-    "比特币", "BTC", "区块链", "人工智能", "智能经济", "TradeFi", 
+    "四论BBT", "BBT", "BlindBox Token", "数字智慧", "智能金融", "AI预测",
+    "比特币", "BTC", "区块链", "人工智能", "智能经济", "TradeFi",
     "价格预测", "量化交易", "Solana", "pump.fun", "老赵讲讲", "2100个BBT"
   ],
   openGraph: {
@@ -55,7 +55,7 @@ export default function Home() {
           }
         },
         {
-          "@type": "ListItem", 
+          "@type": "ListItem",
           "position": 2,
           "item": {
             "@type": "Article",
@@ -66,7 +66,7 @@ export default function Home() {
         },
         {
           "@type": "ListItem",
-          "position": 3, 
+          "position": 3,
           "item": {
             "@type": "Article",
             "name": "当文明开始计算自己：BBT、BTC 与智能货币的未来｜四论 BBT 之三",
@@ -78,7 +78,7 @@ export default function Home() {
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@type": "Article", 
+            "@type": "Article",
             "name": "挑战 BTC 的，不会是另一个 BTC，而是整个智能时代｜四论 BBT 之四",
             "description": "当AI占据市场主导，BBT有潜力成为'机器金融货币'。",
             "url": "https://bbt21u.fun/articles/4"
@@ -140,60 +140,60 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="space-y-16">
-      {/* Hero Section */}
-      <div className="text-center space-y-8">
-        {/* 大logo展示 */}
-        <div className="flex justify-center my-8">
-          <div className="animate-float">
-            <Logo21U size="large" />
+        {/* Hero Section */}
+        <div className="text-center space-y-8">
+          {/* 大logo展示 */}
+          <div className="flex justify-center my-8">
+            <div className="animate-float">
+              <Logo21U size="large" />
+            </div>
           </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-ai-400 via-purple-400 to-crypto-400 bg-clip-text text-transparent leading-tight">
+            四论BBT
+          </h1>
+
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            “电梯原理”说的是，在一部向上的电梯里，即使什么都不做，你也在向上前进。所以，
+            <span className="text-crypto-400 font-semibold"> 先上去再说。</span>
+          </p>
+
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            这就是为什么我建议你持有至少
+            <span className="text-crypto-400 font-semibold"> 2100 个BBT</span>。这是上电梯的门票🎫。
+          </p>
         </div>
 
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-ai-400 via-purple-400 to-crypto-400 bg-clip-text text-transparent leading-tight">
-          四论BBT
-        </h1>
-
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          “电梯原理”说的是，在一部向上的电梯里，即使什么都不做，你也在向上前进。所以，
-          <span className="text-crypto-400 font-semibold"> 先上去再说。</span>
-        </p>
-
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          这就是为什么我建议你持有至少
-          <span className="text-crypto-400 font-semibold"> 2100 个BBT</span>。这是上电梯的门票🎫。
-        </p>
-      </div>
-
-      {/* Articles Grid */}
-      <div className="space-y-8">
-        <div className="space-y-6">
-          {articles.map((article) => (
-            <Link
-              key={article.id}
-              href={`/articles/${article.id}`}
-              className="group block p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-[1.02] glow"
-            >
-              <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-lg bg-gradient-to-r ${article.gradient} text-white flex-shrink-0`}>
-                  {article.icon}
-                </div>
-                <div className="flex-1 space-y-3">
-                  <h3 className="text-xl font-semibold text-white group-hover:bg-gradient-to-r group-hover:from-ai-400 group-hover:to-crypto-400 group-hover:bg-clip-text group-hover:text-transparent transition-all">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-400 leading-relaxed">
-                    {article.excerpt}
-                  </p>
-                  <div className="flex items-center text-ai-400 group-hover:text-crypto-400 transition-colors">
-                    <span className="text-sm font-medium">阅读全文</span>
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+        {/* Articles Grid */}
+        <div className="space-y-8">
+          <div className="space-y-6">
+            {articles.map((article) => (
+              <Link
+                key={article.id}
+                href={`/articles/${article.id}`}
+                className="group block p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-[1.02] glow"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${article.gradient} text-white flex-shrink-0`}>
+                    {article.icon}
+                  </div>
+                  <div className="flex-1 space-y-3">
+                    <h3 className="text-xl font-semibold text-white group-hover:bg-gradient-to-r group-hover:from-ai-400 group-hover:to-crypto-400 group-hover:bg-clip-text group-hover:text-transparent transition-all">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {article.excerpt}
+                    </p>
+                    <div className="flex items-center text-ai-400 group-hover:text-crypto-400 transition-colors">
+                      <span className="text-sm font-medium">阅读全文</span>
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
 
       </div>
     </>
