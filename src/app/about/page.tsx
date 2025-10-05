@@ -6,7 +6,7 @@ import CommentSection from '@/components/CommentSection'
 
 export default function AboutPage() {
   const [copied, setCopied] = useState(false)
-  const walletAddress = "3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump"
+  const walletAddress = "FCaWGBhsM72AivvU2QCpkihPFwLg1Stm2ujvuoX3m2pV"
 
   const copyToClipboard = async () => {
     try {
