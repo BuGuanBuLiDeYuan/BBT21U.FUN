@@ -502,7 +502,7 @@ BTC 是数字黄金，BBT 是机器时代的数字智慧燃料。
 
 **BBT 持仓查看价格预测**：[123456btc.com](https://123456btc.com/)
 
-**持仓地址详情**：[Solscan查看详情](https://solscan.io/token/3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump#holders)
+**[持仓地址详情，点击查看](https://solscan.io/token/3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump#holders)**
 
 （其中排名第一的地址持仓占比 13.35%，是社区捐赠地址；将用于未来的社区建设）
 

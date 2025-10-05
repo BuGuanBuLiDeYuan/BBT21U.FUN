@@ -134,11 +134,21 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   {children}
                 </td>
               ),
+              a: ({ href, children }) => (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline underline-offset-2 hover:underline-offset-4 transition-all duration-200"
+                >
+                  {children}
+                </a>
+              ),
               img: ({ src, alt }) => (
                 <span className="block my-8">
-                  <img 
-                    src={src} 
-                    alt={alt} 
+                  <img
+                    src={src}
+                    alt={alt}
                     className="w-full rounded-lg shadow-xl border border-gray-700/50"
                   />
                   {alt && (
@@ -176,7 +186,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </Link>
           )}
         </div>
-        
+
         <div className="flex-1 flex justify-end">
           {articleId < Object.keys(articles).length && (
             <Link
@@ -215,13 +225,13 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       return `BBT（BlindBox Token）完整基础信息概况，包含技术特性、价值主张、投资建议和核心概念解析。`
     }
     const articleNumber = ['一', '二', '三', '四'][article.id - 1]
-    return `四论BBT之${articleNumber}：${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`
+    return `${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`
   }
-  
+
   return {
     title: `${article.title} - BBT21U.fun`,
     description: getDescription(),
-    keywords: "BBT, 比特币, 区块链, AI, 人工智能, 智能经济, 加密货币, 四论BBT",
+    keywords: "BBT, 比特币, 棒棒糖, AI, 人工智能, Bull Bear Token, 加密货币, 四论BBT",
     authors: [{ name: "老赵讲讲", url: "https://bbt21u.fun" }],
     creator: "老赵讲讲",
     publisher: "BBT21U.fun",
