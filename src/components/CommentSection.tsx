@@ -22,14 +22,14 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
           <Giscus
             id="comments"
             repo="BuGuanBuLiDeYuan/BBT21U.FUN"
-            repoId="R_kgDONHMBDQ"
+            repoId="R_kgDOP8ZSmg"
             category="Announcements"
-            categoryId="DIC_kwDONHMBDc4CjvOp"
+            categoryId="DIC_kwDOP8ZSms4CwREG"
             mapping="pathname"
-            term={`四论BBT之${articleId}`}
+            strict="1"
             reactionsEnabled="1"
             emitMetadata="0"
-            inputPosition="top"
+            inputPosition="bottom"
             theme="dark"
             lang="zh-CN"
             loading="lazy"
