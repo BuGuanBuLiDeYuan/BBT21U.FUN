@@ -99,6 +99,7 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
             </button>
             <div className="text-xs text-gray-500 mt-4">
               <p>💡 管理员注意：需要配置 GitHub OAuth 应用</p>
+              <p>回调URL: https://bbt21u.fun/api/auth/callback/github</p>
               <p>请设置 GITHUB_ID 和 GITHUB_SECRET 环境变量</p>
             </div>
           </div>
