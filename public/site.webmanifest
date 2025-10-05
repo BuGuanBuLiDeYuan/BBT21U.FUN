@@ -1,0 +1,28 @@
+{
+  "name": "BBT21U.fun - 四论BBT：智能金融时代的数字智慧",
+  "short_name": "BBT21U.fun",
+  "description": "探索BBT的崛起与TradeFi智能经济的未来。BBT是智能时代的数字智慧燃料，通过AI预测模型实现价值增长。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-21u.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["finance", "technology", "blockchain", "ai"],
+  "lang": "zh-CN",
+  "scope": "/",
+  "prefer_related_applications": false
+}

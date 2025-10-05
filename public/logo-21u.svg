@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="120" height="40">
+  <defs>
+    <!-- 金色渐变定义 -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF8C00;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 金色阴影渐变 -->
+    <linearGradient id="goldShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8860B;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#DAA520;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- 发光效果滤镜 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 3D 阴影滤镜 -->
+    <filter id="shadow3d" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="1" flood-color="#B8860B" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景阴影文字 (3D效果) -->
+  <text x="62" y="28" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" text-anchor="middle" fill="url(#goldShadow)" transform="translate(1.5, 1.5)">21U</text>
+  
+  <!-- 主要文字 -->
+  <text x="60" y="26" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" text-anchor="middle" fill="url(#goldGradient)" filter="url(#glow) url(#shadow3d)">21U</text>
+  
+  <!-- 高光效果 -->
+  <text x="60" y="26" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" text-anchor="middle" fill="none" stroke="#FFFF00" stroke-width="0.5" opacity="0.6">21U</text>
+</svg>
