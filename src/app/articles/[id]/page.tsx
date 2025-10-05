@@ -78,7 +78,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </h3>
               ),
               p: ({ children }) => (
-                <p className="mb-4 text-gray-300 leading-relaxed">
+                <p className="mb-4 text-gray-300 leading-relaxed break-all">
                   {children}
                 </p>
               ),

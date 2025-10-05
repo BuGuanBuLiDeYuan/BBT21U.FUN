@@ -493,10 +493,7 @@ BTC 是数字黄金，BBT 是机器时代的数字智慧燃料。
 
 **区块链**：Solana链，简称 SOL 链
 
-**合约**：
-\`\`\`
-3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump
-\`\`\`
+**合约**：3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump
 
 **粉丝网站**：[bbtfans.club](https://bbtfans.club/)
 
