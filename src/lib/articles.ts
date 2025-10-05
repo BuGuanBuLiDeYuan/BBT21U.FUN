@@ -115,29 +115,7 @@ BTC 把"自由意志"写入了区块链，而 BBT，将"机器共识"写入未�
 
 ---
 
-## 关于 BBT 的基础信息
-
-**全称**：BlindBox Token
-
-**发布时间**：2024年11月19日
-
-**发布平台**：pump.fun，SOL链最大的发币平台；在这个平台发的币，总量固定为十亿枚、公平发射、没有白名单/黑名单等，保证了全员公平
-
-**区块链**：Solana链，简称 SOL 链
-
-**合约**：3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump
-
-**粉丝网站**：https://bbtfans.club/
-
-**BBT 持仓查看价格预测**：https://123456btc.com/
-
-**持仓地址详情**：https://solscan.io/token/3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump#holders
-
-（其中排名第一的地址持仓占比 13.35%，是社区捐赠地址；将用于未来的社区建设）
-
-回到开头，为什么建议 2100 个 BBT？因为这是能够查看 AI 信号的最低持仓要求；更重要的是，目前 2100 个BBT 价值 30 多刀，两百多块钱，不论是自己买还是拉朋友来买都毫无压力。
-
-在建立充分信仰之前，不建议任何人购买大量 BBT。`
+*更多关于BBT的详细信息，请参阅[《BBT基础信息概况》](/articles/5)*`
   },
   2: {
     id: 2,
@@ -265,29 +243,7 @@ BBT 的潜台词，就是在回答这样一个问题：
 
 ---
 
-## 关于 BBT 的基础信息
-
-**全称**：BlindBox Token
-
-**发布时间**：2024年11月19日
-
-**发布平台**：pump.fun，SOL链最大的发币平台；在这个平台发的币，总量固定为十亿枚、公平发射、没有白名单/黑名单等，保证了全员公平
-
-**区块链**：Solana链，简称 SOL 链
-
-**合约**：3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump
-
-**粉丝网站**：https://bbtfans.club/
-
-**BBT 持仓查看价格预测**：https://123456btc.com/
-
-**持仓地址详情**：https://solscan.io/token/3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump#holders
-
-（其中排名第一的地址持仓占比 13.35%，是社区捐赠地址；将用于未来的社区建设）
-
-回到开头，为什么建议 2100 个 BBT？因为这是能够查看 AI 信号的最低持仓要求；更重要的是，目前 2100 个BBT 价值 30 多刀，两百多块钱，不论是自己买还是拉朋友来买都毫无压力。
-
-在建立充分信仰之前，不建议任何人购买大量 BBT。
+*更多关于BBT的详细信息，请参阅[《BBT基础信息概况》](/articles/5)*
 `
   },
   3: {
@@ -401,29 +357,7 @@ BBT 的经济逻辑告诉我们：在智能时代，价值不再只源于稀缺�
 
 ---
 
-## 关于 BBT 的基础信息
-
-**全称**：BlindBox Token
-
-**发布时间**：2024年11月19日
-
-**发布平台**：pump.fun，SOL链最大的发币平台；在这个平台发的币，总量固定为十亿枚、公平发射、没有白名单/黑名单等，保证了全员公平
-
-**区块链**：Solana链，简称 SOL 链
-
-**合约**：3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump
-
-**粉丝网站**：https://bbtfans.club/
-
-**BBT 持仓查看价格预测**：https://123456btc.com/
-
-**持仓地址详情**：https://solscan.io/token/3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump#holders
-
-（其中排名第一的地址持仓占比 13.35%，是社区捐赠地址；将用于未来的社区建设）
-
-回到开头，为什么建议 2100 个 BBT？因为这是能够查看 AI 信号的最低持仓要求；更重要的是，目前 2100 个BBT 价值 30 多刀，两百多块钱，不论是自己买还是拉朋友来买都毫无压力。
-
-在建立充分信仰之前，不建议任何人购买大量 BBT。
+*更多关于BBT的详细信息，请参阅[《BBT基础信息概况》](/articles/5)*
 `
 
   },
@@ -542,6 +476,13 @@ BTC 是数字黄金，BBT 是机器时代的数字智慧燃料。
 
 ---
 
+*更多关于BBT的详细信息，请参阅[《BBT基础信息概况》](/articles/5)*`
+  },
+  5: {
+    id: 5,
+    title: "附录：BBT基础信息",
+    content: `# BBT（BlindBox Token）基础信息概况
+
 ## 关于 BBT 的基础信息
 
 **全称**：BlindBox Token
@@ -552,18 +493,45 @@ BTC 是数字黄金，BBT 是机器时代的数字智慧燃料。
 
 **区块链**：Solana链，简称 SOL 链
 
-**合约**：3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump
+**合约**：
+\`\`\`
+3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump
+\`\`\`
 
-**粉丝网站**：https://bbtfans.club/
+**粉丝网站**：[bbtfans.club](https://bbtfans.club/)
 
-**BBT 持仓查看价格预测**：https://123456btc.com/
+**BBT 持仓查看价格预测**：[123456btc.com](https://123456btc.com/)
 
-**持仓地址详情**：https://solscan.io/token/3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump#holders
+**持仓地址详情**：[Solscan查看详情](https://solscan.io/token/3s4AK2x2nGkKP8ZADbcKuhdPr3coSuh1XnwZEzWgpump#holders)
 
 （其中排名第一的地址持仓占比 13.35%，是社区捐赠地址；将用于未来的社区建设）
 
-回到开头，为什么建议 2100 个 BBT？因为这是能够查看 AI 信号的最低持仓要求；更重要的是，目前 2100 个BBT 价值 30 多刀，两百多块钱，不论是自己买还是拉朋友来买都毫无压力。
+## 为什么建议持有 2100 个 BBT？
 
-在建立充分信仰之前，不建议任何人购买大量 BBT。`
+回到开头，为什么建议 2100 个 BBT？
+
+**功能门槛**：这是能够查看 AI 信号的最低持仓要求
+
+**投资成本**：目前 2100 个BBT 价值 30 多刀，两百多块钱，不论是自己买还是拉朋友来买都毫无压力
+
+**理性投资**：在建立充分信仰之前，不建议任何人购买大量 BBT
+
+## BBT 的核心价值主张
+
+BBT 不仅仅是一个代币，而是智能金融时代的数字智慧燃料：
+
+- **AI 预测系统**：背后拥有上千个不断进化的 AI 策略模型
+- **通缩机制**：每次使用消耗 BBT，形成通缩逻辑
+- **智能增益**：系统使用越频繁，预测能力越强
+- **价值循环**：代币→消耗→智能增益→预测能力→再次消耗→代币升值
+
+## 技术特性
+
+- **公平发射**：十亿枚总量，无白名单/黑名单
+- **去中心化**：基于 Solana 区块链的去中心化代币
+- **可验证**：所有交易和持仓信息公开透明
+- **实用性**：持仓即可获得 AI 预测服务
+
+BBT 代表着从静态储值到动态智能的价值范式转换，是智能经济时代的重要实验。`
   }
 }

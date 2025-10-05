@@ -209,18 +209,25 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     }
   }
 
-  const articleNumber = ['一', '二', '三', '四'][article.id - 1]
+  // 为第5篇文章(BBT基础信息)提供特殊的描述
+  const getDescription = () => {
+    if (article.id === 5) {
+      return `BBT（BlindBox Token）完整基础信息概况，包含技术特性、价值主张、投资建议和核心概念解析。`
+    }
+    const articleNumber = ['一', '二', '三', '四'][article.id - 1]
+    return `四论BBT之${articleNumber}：${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`
+  }
   
   return {
     title: `${article.title} - BBT21U.fun`,
-    description: `四论BBT之${articleNumber}：${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`,
+    description: getDescription(),
     keywords: "BBT, 比特币, 区块链, AI, 人工智能, 智能经济, 加密货币, 四论BBT",
     authors: [{ name: "老赵讲讲", url: "https://bbt21u.fun" }],
     creator: "老赵讲讲",
     publisher: "BBT21U.fun",
     openGraph: {
       title: `${article.title} - BBT21U.fun`,
-      description: `四论BBT之${articleNumber}：${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`,
+      description: getDescription(),
       url: `https://bbt21u.fun/articles/${article.id}`,
       siteName: "BBT21U.fun",
       images: [
@@ -245,7 +252,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     twitter: {
       card: "summary_large_image",
       title: `${article.title} - BBT21U.fun`,
-      description: `四论BBT之${articleNumber}：${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`,
+      description: getDescription(),
       images: ["/og-image.png"],
       creator: "@bbt21u",
     },

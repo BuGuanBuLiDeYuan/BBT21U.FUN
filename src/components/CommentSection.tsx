@@ -99,33 +99,8 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
           </h3>
         </div>
 
-        {/* Login prompt or comment form */}
-        {!session ? (
-          <div className="text-center py-8 space-y-4">
-            <p className="text-gray-400">
-              登录 GitHub 后即可参与讨论
-            </p>
-            <button
-              onClick={() => {
-                try {
-                  signIn('github')
-                } catch (error) {
-                  console.error('GitHub登录错误:', error)
-                  alert('GitHub OAuth 尚未配置，请联系管理员')
-                }
-              }}
-              className="inline-flex items-center space-x-2 px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 rounded-lg font-semibold transition-all glow text-sm md:text-base"
-            >
-              <Github className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-              <span className="whitespace-nowrap">GitHub 登录</span>
-            </button>
-            <div className="text-xs text-gray-500 mt-4">
-              <p>💡 管理员注意：需要配置 GitHub OAuth 应用</p>
-              <p>回调URL: https://bbt21u.fun/api/auth/callback/github</p>
-              <p>请设置 GITHUB_ID 和 GITHUB_SECRET 环境变量</p>
-            </div>
-          </div>
-        ) : (
+        {/* Comment form for logged in users */}
+        {session && (
           <form onSubmit={handleSubmitComment} className="space-y-4">
             <div className="flex items-start space-x-3">
               {session.user?.image ? (
@@ -171,7 +146,7 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
             <div className="text-center py-12">
               <MessageCircle className="w-12 h-12 text-gray-600 mx-auto mb-4" />
               <p className="text-gray-400">
-                暂无评论，{session ? '成为第一个评论的人吧！' : '登录后可以发表评论'}
+                {session ? '暂无评论，成为第一个评论的人吧！' : '暂无评论'}
               </p>
             </div>
           ) : (
@@ -203,30 +178,35 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
                   </div>
                 </div>
               ))}
-              {!session && comments.length > 0 && (
-                <div className="text-center py-4 border-t border-gray-700/50">
-                  <p className="text-gray-400 text-sm mb-3">
-                    想要参与讨论？
-                  </p>
-                  <button
-                    onClick={() => {
-                      try {
-                        signIn('github')
-                      } catch (error) {
-                        console.error('GitHub登录错误:', error)
-                        alert('GitHub OAuth 尚未配置，请联系管理员')
-                      }
-                    }}
-                    className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 rounded-lg font-medium transition-all glow text-sm"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span>GitHub 登录发表评论</span>
-                  </button>
-                </div>
-              )}
             </>
           )}
         </div>
+
+        {/* Single login prompt for non-logged users */}
+        {!session && (
+          <div className="text-center py-8 space-y-4 border-t border-gray-700/50 mt-8">
+            <p className="text-gray-400">
+              登录 GitHub 后即可参与讨论
+            </p>
+            <button
+              onClick={() => {
+                try {
+                  signIn('github')
+                } catch (error) {
+                  console.error('GitHub登录错误:', error)
+                  alert('GitHub OAuth 尚未配置，请联系管理员')
+                }
+              }}
+              className="inline-flex items-center space-x-2 px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 rounded-lg font-semibold transition-all glow text-sm md:text-base"
+            >
+              <Github className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+              <span className="whitespace-nowrap">GitHub 登录</span>
+            </button>
+            <div className="text-xs text-gray-500 mt-4">
+              <p>💬 使用GitHub账户快速参与讨论</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

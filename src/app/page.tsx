@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Cpu, TrendingUp, Zap, Brain } from "lucide-react";
+import { ArrowRight, Cpu, TrendingUp, Zap, Brain, Info } from "lucide-react";
 import Logo21U from "@/components/Logo21U";
 import type { Metadata } from 'next';
 
@@ -83,6 +83,16 @@ export default function Home() {
             "description": "当AI占据市场主导，BBT有潜力成为'机器金融货币'。",
             "url": "https://bbt21u.fun/articles/4"
           }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Article",
+            "name": "附录：BBT基础信息概况",
+            "description": "BBT（BlindBox Token）完整基础信息，包含技术特性、价值主张和投资建议。",
+            "url": "https://bbt21u.fun/articles/5"
+          }
         }
       ]
     },
@@ -130,6 +140,13 @@ export default function Home() {
       excerpt: "当AI占据市场主导，BBT有潜力成为'机器金融货币'。分析BBT是否可能成为智能金融时代的基础货币。",
       icon: <Zap className="w-6 h-6" />,
       gradient: "from-green-400 to-emerald-500",
+    },
+    {
+      id: 5,
+      title: "5️⃣ 《BBT基础信息概况｜四论BBT之五》",
+      excerpt: "BBT（BlindBox Token）完整基础信息概况，包含技术特性、价值主张、投资建议和核心概念解析。",
+      icon: <Info className="w-6 h-6" />,
+      gradient: "from-indigo-400 to-purple-500",
     }
   ];
 
