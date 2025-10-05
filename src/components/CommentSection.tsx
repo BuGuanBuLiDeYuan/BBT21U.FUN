@@ -84,12 +84,23 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
               登录 GitHub 后即可参与讨论
             </p>
             <button
-              onClick={() => signIn('github')}
+              onClick={() => {
+                try {
+                  signIn('github')
+                } catch (error) {
+                  console.error('GitHub登录错误:', error)
+                  alert('GitHub OAuth 尚未配置，请联系管理员')
+                }
+              }}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 rounded-lg font-semibold transition-all glow"
             >
               <Github className="w-5 h-5" />
               <span>GitHub 登录</span>
             </button>
+            <div className="text-xs text-gray-500 mt-4">
+              <p>💡 管理员注意：需要配置 GitHub OAuth 应用</p>
+              <p>请设置 GITHUB_ID 和 GITHUB_SECRET 环境变量</p>
+            </div>
           </div>
         ) : (
           <form onSubmit={handleSubmitComment} className="space-y-4">
