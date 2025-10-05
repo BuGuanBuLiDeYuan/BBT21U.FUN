@@ -1,103 +1,200 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Cpu, TrendingUp, Zap, Brain } from "lucide-react";
+import Logo21U from "@/components/Logo21U";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "四论BBT：智能金融时代的数字智慧 - BBT21U.fun",
+  description: "探索BBT的崛起与TradeFi智能经济的未来。从数字黄金到数字智慧，从预测力稀缺到智能货币经济，BBT如何重新定义价值？为什么建议你持有至少2100个BBT？",
+  keywords: [
+    "四论BBT", "BBT", "BlindBox Token", "数字智慧", "智能金融", "AI预测", 
+    "比特币", "BTC", "区块链", "人工智能", "智能经济", "TradeFi", 
+    "价格预测", "量化交易", "Solana", "pump.fun", "老赵讲讲", "2100个BBT"
+  ],
+  openGraph: {
+    title: "四论BBT：智能金融时代的数字智慧",
+    description: "探索BBT的崛起与TradeFi智能经济的未来。BBT是智能时代的数字智慧燃料，通过AI预测模型实现价值增长。",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "四论BBT：智能金融时代的数字智慧",
+      },
+    ],
+  },
+  twitter: {
+    title: "四论BBT：智能金融时代的数字智慧",
+    description: "探索BBT的崛起与TradeFi智能经济的未来。BBT是智能时代的数字智慧燃料。",
+  },
+  alternates: {
+    canonical: "https://bbt21u.fun",
+  }
+};
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "四论BBT：智能金融时代的数字智慧",
+    "description": "探索BBT的崛起与TradeFi智能经济的未来。BBT是智能时代的数字智慧燃料，通过AI预测模型实现价值增长。",
+    "url": "https://bbt21u.fun",
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "四论BBT系列文章",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "name": "BTC 是数字黄金，什么才是数字智慧｜四论 BBT 之一",
+            "description": "从黄金到比特币再到BBT，价值定义逐步从物质稀缺到共识稀缺再到智能稀缺。",
+            "url": "https://bbt21u.fun/articles/1"
+          }
+        },
+        {
+          "@type": "ListItem", 
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "name": "预测力，才是人类最稀缺的资源｜四论 BBT 之二",
+            "description": "BBT将预测能力商品化、去中心化、开放化，让每个人都可以拥有智能预测的权利。",
+            "url": "https://bbt21u.fun/articles/2"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3, 
+          "item": {
+            "@type": "Article",
+            "name": "当文明开始计算自己：BBT、BTC 与智能货币的未来｜四论 BBT 之三",
+            "description": "BBT的经济模型建立在消耗→燃烧→通缩→智能增益的循环之上。",
+            "url": "https://bbt21u.fun/articles/3"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article", 
+            "name": "挑战 BTC 的，不会是另一个 BTC，而是整个智能时代｜四论 BBT 之四",
+            "description": "当AI占据市场主导，BBT有潜力成为'机器金融货币'。",
+            "url": "https://bbt21u.fun/articles/4"
+          }
+        }
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "name": "首页",
+            "url": "https://bbt21u.fun"
+          }
+        }
+      ]
+    }
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const articles = [
+    {
+      id: 1,
+      title: "1️⃣ 《BTC 是数字黄金，什么才是数字智慧｜四论 BBT 之一》",
+      excerpt: "从黄金到比特币再到BBT，价值定义逐步从物质稀缺到共识稀缺再到智能稀缺。探索BBT如何承接比特币的共识逻辑，同时引入智能化动力。",
+      icon: <Brain className="w-6 h-6" />,
+      gradient: "from-yellow-400 to-orange-500",
+    },
+    {
+      id: 2,
+      title: "2️⃣ 《预测力，才是人类最稀缺的资源｜四论 BBT 之二》",
+      excerpt: "历史上的财富与权力，本质上源于预测未来的能力。BBT将预测能力商品化、去中心化、开放化，让每个人都可以拥有智能预测的权利。",
+      icon: <TrendingUp className="w-6 h-6" />,
+      gradient: "from-purple-400 to-pink-500",
+    },
+    {
+      id: 3,
+      title: "3️⃣ 《当文明开始计算自己：BBT、BTC 与智能货币的未来｜四论 BBT 之三》",
+      excerpt: "BBT的经济模型建立在消耗→燃烧→通缩→智能增益的循环之上。每一次代币消耗，都是AI模型迭代与预测能力增强的过程。",
+      icon: <Cpu className="w-6 h-6" />,
+      gradient: "from-blue-400 to-cyan-500",
+    },
+    {
+      id: 4,
+      title: "4️⃣ 《挑战 BTC 的，不会是另一个 BTC，而是整个智能时代｜四论 BBT 之四》",
+      excerpt: "当AI占据市场主导，BBT有潜力成为'机器金融货币'。分析BBT是否可能成为智能金融时代的基础货币。",
+      icon: <Zap className="w-6 h-6" />,
+      gradient: "from-green-400 to-emerald-500",
+    }
+  ];
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="space-y-16">
+      {/* Hero Section */}
+      <div className="text-center space-y-8">
+        {/* 大logo展示 */}
+        <div className="flex justify-center my-8">
+          <div className="animate-float">
+            <Logo21U size="large" />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-ai-400 via-purple-400 to-crypto-400 bg-clip-text text-transparent leading-tight">
+          四论BBT
+        </h1>
+
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          “电梯原理”说的是，在一部向上的电梯里，即使什么都不做，你也在向上前进。所以，
+          <span className="text-crypto-400 font-semibold"> 先上去再说。</span>
+        </p>
+
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          这就是为什么我建议你持有至少
+          <span className="text-crypto-400 font-semibold"> 2100 个BBT</span>。这是上电梯的门票🎫。
+        </p>
+      </div>
+
+      {/* Articles Grid */}
+      <div className="space-y-8">
+        <div className="space-y-6">
+          {articles.map((article) => (
+            <Link
+              key={article.id}
+              href={`/articles/${article.id}`}
+              className="group block p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-[1.02] glow"
+            >
+              <div className="flex items-start space-x-4">
+                <div className={`p-3 rounded-lg bg-gradient-to-r ${article.gradient} text-white flex-shrink-0`}>
+                  {article.icon}
+                </div>
+                <div className="flex-1 space-y-3">
+                  <h3 className="text-xl font-semibold text-white group-hover:bg-gradient-to-r group-hover:from-ai-400 group-hover:to-crypto-400 group-hover:bg-clip-text group-hover:text-transparent transition-all">
+                    {article.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {article.excerpt}
+                  </p>
+                  <div className="flex items-center text-ai-400 group-hover:text-crypto-400 transition-colors">
+                    <span className="text-sm font-medium">阅读全文</span>
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      </div>
+    </>
   );
 }

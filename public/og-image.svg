@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  
+  <!-- Background gradient -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Text gradients -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#eab308;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="3" fill="#3b82f6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1100" cy="150" r="2" fill="#22c55e" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1050" cy="500" r="4" fill="#f97316" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Logo -->
+  <text x="600" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#logoGradient)">目标价格：1BBT=21U</text>
+  
+  <!-- Main title -->
+  <text x="600" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#titleGradient)">四论BBT</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#e5e7eb"> 2100 个 BBT，是 AI 交易系统为你赚钱的门票</text>
+  
+  <!-- Description -->
+  
+  <!-- Website -->
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#22c55e">网址：BBT21U.fun</text>
+  
+</svg>
