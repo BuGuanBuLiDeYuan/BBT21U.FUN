@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     siteName: "BBT21U.fun",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "BBT21U.fun - 四论BBT：智能金融时代的数字智慧",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
     locale: "zh_CN",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BBT21U.fun - 四论BBT：智能金融时代的数字智慧",
     description: "探索BBT的崛起与TradeFi智能经济的未来。BBT是智能时代的数字智慧燃料。",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
     creator: "@bbt21u",
     site: "@bbt21u",
   },

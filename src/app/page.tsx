@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: "探索BBT的崛起与TradeFi智能经济的未来。BBT是智能时代的数字智慧燃料，通过AI预测模型实现价值增长。",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "四论BBT：智能金融时代的数字智慧",
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "四论BBT：智能金融时代的数字智慧",
     description: "探索BBT的崛起与TradeFi智能经济的未来。BBT是智能时代的数字智慧燃料。",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://bbt21u.fun",

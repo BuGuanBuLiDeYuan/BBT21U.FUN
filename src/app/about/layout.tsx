@@ -14,11 +14,11 @@ export const metadata: Metadata = {
     siteName: "BBT21U.fun",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "关于《四论BBT》- BBT21U.fun",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
     locale: "zh_CN",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "关于《四论BBT》- BBT21U.fun",
     description: "关于BBT的话题，这4篇文章已经讲得差不多了。文章自由开放，欢迎大家随意处置。",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
     creator: "@bbt21u",
   },
 }
