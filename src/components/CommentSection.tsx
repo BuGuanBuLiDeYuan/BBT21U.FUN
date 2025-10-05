@@ -27,6 +27,28 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
     const storedComments = localStorage.getItem(`comments-${articleId}`)
     if (storedComments) {
       setComments(JSON.parse(storedComments))
+    } else {
+      // 添加一些示例评论，展示评论功能
+      const demoComments: Comment[] = [
+        {
+          id: 'demo-1',
+          author: '老赵讲讲',
+          content: '欢迎大家在这里讨论BBT和智能金融的话题！我会定期回复大家的问题。',
+          timestamp: new Date('2025-10-01T10:00:00').toISOString(),
+          avatar: undefined
+        },
+        {
+          id: 'demo-2', 
+          author: 'AI爱好者',
+          content: '这篇文章写得很深刻，BBT的智能稀缺概念确实是一个创新。期待看到更多关于预测力经济的讨论。',
+          timestamp: new Date('2025-10-02T14:30:00').toISOString(),
+          avatar: undefined
+        }
+      ]
+      if (articleId === 1) {
+        setComments(demoComments)
+        localStorage.setItem(`comments-${articleId}`, JSON.stringify(demoComments))
+      }
     }
   }, [articleId])
 
@@ -143,7 +165,7 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
           </form>
         )}
 
-        {/* Comments list */}
+        {/* Comments list - Always visible to everyone */}
         <div className="space-y-6 mt-8">
           {comments.length === 0 ? (
             <div className="text-center py-12">
@@ -153,30 +175,56 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
               </p>
             </div>
           ) : (
-            comments.map((comment) => (
-              <div key={comment.id} className="flex items-start space-x-3 p-4 bg-gray-800/30 rounded-lg border border-gray-700/30">
-                {comment.avatar ? (
-                  <img
-                    src={comment.avatar}
-                    alt={comment.author}
-                    className="w-10 h-10 rounded-full"
-                  />
-                ) : (
-                  <div className="w-10 h-10 bg-gradient-to-r from-ai-600 to-crypto-600 rounded-full flex items-center justify-center">
-                    <User className="w-5 h-5 text-white" />
-                  </div>
-                )}
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className="font-medium text-white">{comment.author}</span>
-                    <span className="text-sm text-gray-400">{formatTime(comment.timestamp)}</span>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">
-                    {comment.content}
-                  </p>
-                </div>
+            <>
+              <div className="text-sm text-gray-400 mb-4">
+                共 {comments.length} 条评论
               </div>
-            ))
+              {comments.map((comment) => (
+                <div key={comment.id} className="flex items-start space-x-3 p-4 bg-gray-800/30 rounded-lg border border-gray-700/30">
+                  {comment.avatar ? (
+                    <img
+                      src={comment.avatar}
+                      alt={comment.author}
+                      className="w-10 h-10 rounded-full"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 bg-gradient-to-r from-ai-600 to-crypto-600 rounded-full flex items-center justify-center">
+                      <User className="w-5 h-5 text-white" />
+                    </div>
+                  )}
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="font-medium text-white">{comment.author}</span>
+                      <span className="text-sm text-gray-400">{formatTime(comment.timestamp)}</span>
+                    </div>
+                    <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">
+                      {comment.content}
+                    </p>
+                  </div>
+                </div>
+              ))}
+              {!session && comments.length > 0 && (
+                <div className="text-center py-4 border-t border-gray-700/50">
+                  <p className="text-gray-400 text-sm mb-3">
+                    想要参与讨论？
+                  </p>
+                  <button
+                    onClick={() => {
+                      try {
+                        signIn('github')
+                      } catch (error) {
+                        console.error('GitHub登录错误:', error)
+                        alert('GitHub OAuth 尚未配置，请联系管理员')
+                      }
+                    }}
+                    className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 rounded-lg font-medium transition-all glow text-sm"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>GitHub 登录发表评论</span>
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
