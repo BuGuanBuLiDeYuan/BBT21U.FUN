@@ -236,7 +236,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     creator: "老赵讲讲",
     publisher: "BBT21U.fun",
     openGraph: {
-      title: `${article.title} - BBT21U.fun`,
+      title: `${article.title}`,
       description: getDescription(),
       url: `https://bbt21u.fun/articles/${article.id}`,
       siteName: "BBT21U.fun",
@@ -251,7 +251,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       ],
       locale: "zh_CN",
       type: "article",
-      publishedTime: "2025-10-01T00:00:00.000Z",
+      publishedTime: "2025-10-05T00:00:00.000Z",
       authors: ["老赵讲讲"],
       section: "智能金融",
       tags: ["BBT", "比特币", "AI", "智能经济", "加密货币"],
