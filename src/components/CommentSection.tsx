@@ -92,10 +92,10 @@ export default function CommentSection({ articleId }: CommentSectionProps) {
                   alert('GitHub OAuth 尚未配置，请联系管理员')
                 }
               }}
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 rounded-lg font-semibold transition-all glow"
+              className="inline-flex items-center space-x-2 px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 rounded-lg font-semibold transition-all glow text-sm md:text-base"
             >
-              <Github className="w-5 h-5" />
-              <span>GitHub 登录</span>
+              <Github className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+              <span className="whitespace-nowrap">GitHub 登录</span>
             </button>
             <div className="text-xs text-gray-500 mt-4">
               <p>💡 管理员注意：需要配置 GitHub OAuth 应用</p>

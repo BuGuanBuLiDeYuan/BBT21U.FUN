@@ -13,52 +13,53 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-3 group">
+            <Link href="/" className="flex items-center space-x-2 md:space-x-3 group">
               <div className="group-hover:scale-110 transition-transform">
-                <Logo21U size="medium" variant="premium" />
+                <Logo21U size="small" variant="premium" className="md:hidden" />
+                <Logo21U size="medium" variant="premium" className="hidden md:block" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-ai-400 to-crypto-400 bg-clip-text text-transparent">
+              <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-ai-400 to-crypto-400 bg-clip-text text-transparent">
                 BBT21U.fun
               </span>
             </Link>
 
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2 md:space-x-6">
               <Link 
                 href="/" 
-                className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center space-x-1 md:space-x-2 text-gray-300 hover:text-white transition-colors"
               >
-                <Home size={18} />
-                <span>首页</span>
+                <Home size={16} className="md:w-[18px] md:h-[18px]" />
+                <span className="text-sm md:text-base whitespace-nowrap">首页</span>
               </Link>
               <Link 
                 href="/about" 
-                className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center space-x-1 md:space-x-2 text-gray-300 hover:text-white transition-colors"
               >
-                <Info size={18} />
-                <span>关于</span>
+                <Info size={16} className="md:w-[18px] md:h-[18px]" />
+                <span className="text-sm md:text-base whitespace-nowrap">关于</span>
               </Link>
               
               {session ? (
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2 text-gray-300">
+                <div className="flex items-center space-x-2 md:space-x-4">
+                  <div className="hidden md:flex items-center space-x-2 text-gray-300">
                     <User size={18} />
                     <span className="text-sm">{session.user?.name}</span>
                   </div>
                   <button
                     onClick={() => signOut()}
-                    className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-red-600/20 text-red-400 hover:bg-red-600/30 transition-colors"
+                    className="flex items-center space-x-1 md:space-x-2 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-red-600/20 text-red-400 hover:bg-red-600/30 transition-colors"
                   >
-                    <LogOut size={16} />
-                    <span>退出</span>
+                    <LogOut size={14} className="md:w-4 md:h-4" />
+                    <span className="text-xs md:text-sm">退出</span>
                   </button>
                 </div>
               ) : (
                 <button
                   onClick={() => signIn('github')}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 transition-all glow"
+                  className="flex items-center space-x-1 md:space-x-2 px-2 md:px-4 py-1 md:py-2 rounded-lg bg-gradient-to-r from-ai-600 to-crypto-600 hover:from-ai-500 hover:to-crypto-500 transition-all glow text-xs md:text-sm"
                 >
-                  <Github size={16} />
-                  <span>GitHub 登录</span>
+                  <Github size={14} className="md:w-4 md:h-4" />
+                  <span className="whitespace-nowrap">GitHub登录</span>
                 </button>
               )}
             </div>
