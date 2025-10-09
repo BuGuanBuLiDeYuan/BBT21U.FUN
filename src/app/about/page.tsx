@@ -1,6 +1,6 @@
 'use client'
 
-import { Cpu, Zap, TrendingUp, Shield, Globe, Github, Copy, Check } from 'lucide-react'
+import { Cpu, Zap, TrendingUp, Shield, Globe, Github, Copy, Check, Download } from 'lucide-react'
 import { useState } from 'react'
 import CommentSection from '@/components/CommentSection'
 
@@ -29,6 +29,60 @@ export default function AboutPage() {
         <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
           关于 BBT 的话题，这 4 篇文章已经讲得差不多了。文章自由开放，欢迎大家随意处置。当然了，我建议，在看到这里的时候，立即买入至少 2100 个 BBT。千错万错，不要踏空错过。
         </p>
+      </div>
+
+      {/* Download Section */}
+      <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-xl p-8 border border-gray-700/50">
+        <div className="flex items-center space-x-3 mb-6">
+          <div className="p-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg">
+            <Download className="w-6 h-6 text-white" />
+          </div>
+          <h2 className="text-2xl font-semibold text-white">易拉宝设计文件下载</h2>
+        </div>
+
+        <p className="text-gray-300 mb-6 leading-relaxed">
+          免费提供 BBT 推广易拉宝设计文件，大家可以自己下载印刷，用来推广 BBT。包含 PDF 印刷版和 PNG 预览版。
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-4">
+          <a
+            href="/Rollup_Stand_BBT_20251009.pdf"
+            download="Rollup_Stand_BBT_20251009.pdf"
+            className="flex items-center justify-between p-4 bg-gray-800/50 rounded-lg border border-gray-600/50 hover:bg-gray-800/70 hover:border-gray-500/50 transition-all group"
+          >
+            <div className="flex items-center space-x-3">
+              <div className="p-2 bg-red-500/20 rounded-lg">
+                <Download className="w-5 h-5 text-red-400" />
+              </div>
+              <div>
+                <h3 className="text-white font-medium">PDF 印刷版</h3>
+                <p className="text-gray-400 text-sm">高清印刷文件</p>
+              </div>
+            </div>
+            <div className="text-gray-400 group-hover:text-white transition-colors">
+              <Download className="w-5 h-5" />
+            </div>
+          </a>
+
+          <a
+            href="/Rollup_Stand_BBT_20251009.png"
+            download="Rollup_Stand_BBT_20251009.png"
+            className="flex items-center justify-between p-4 bg-gray-800/50 rounded-lg border border-gray-600/50 hover:bg-gray-800/70 hover:border-gray-500/50 transition-all group"
+          >
+            <div className="flex items-center space-x-3">
+              <div className="p-2 bg-blue-500/20 rounded-lg">
+                <Download className="w-5 h-5 text-blue-400" />
+              </div>
+              <div>
+                <h3 className="text-white font-medium">PNG 预览版</h3>
+                <p className="text-gray-400 text-sm">设计预览文件</p>
+              </div>
+            </div>
+            <div className="text-gray-400 group-hover:text-white transition-colors">
+              <Download className="w-5 h-5" />
+            </div>
+          </a>
+        </div>
       </div>
 
       {/* Content */}
@@ -152,7 +206,7 @@ export default function AboutPage() {
             />
           </div>
 
-          <div 
+          <div
             onClick={copyToClipboard}
             className="bg-gray-800/50 rounded-lg p-4 font-mono text-crypto-400 text-sm break-all cursor-pointer hover:bg-gray-800/70 transition-colors relative group"
           >
