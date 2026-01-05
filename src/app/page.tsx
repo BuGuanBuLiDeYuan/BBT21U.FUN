@@ -179,10 +179,24 @@ export default function Home() {
             这就是为什么我建议你持有至少
             <span className="text-crypto-400 font-semibold"> 2100 个BBT</span>。这是上电梯的门票🎫。
           </p>
+
+
+          <div className="flex justify-center pt-4">
+            <Link
+              href="#articles"
+              className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-ai-600 to-crypto-600 text-white font-semibold shadow-lg shadow-ai-500/20 hover:shadow-ai-500/40 hover:scale-105 transition-all duration-300 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <span className="relative flex items-center">
+                开始阅读
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* Articles Grid */}
-        <div className="space-y-8">
+        <div id="articles" className="space-y-8 scroll-mt-24">
           <div className="space-y-6">
             {articles.map((article) => (
               <Link
@@ -212,7 +226,7 @@ export default function Home() {
           </div>
         </div>
 
-      </div>
+      </div >
     </>
   );
 }
