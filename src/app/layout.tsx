@@ -123,9 +123,11 @@ export default function RootLayout({
     "inLanguage": "zh-CN",
     "keywords": "BBT, BlindBox Token, 比特币, BTC, 区块链, AI, 人工智能, 智能经济, 加密货币, 数字智慧, 智能金融, TradeFi, 价格预测, 量化交易, Solana",
     "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://bbt21u.fun/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+      "@type": "ReadAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://bbt21u.fun/articles/{article_id}"
+      }
     },
     "mainEntity": {
       "@type": "Blog",
@@ -135,22 +137,42 @@ export default function RootLayout({
         {
           "@type": "BlogPosting",
           "headline": "BTC 是数字黄金，什么才是数字智慧｜四论 BBT 之一",
-          "url": "https://bbt21u.fun/articles/1"
-        },
-        {
-          "@type": "BlogPosting", 
-          "headline": "预测力，才是人类最稀缺的资源｜四论 BBT 之二",
-          "url": "https://bbt21u.fun/articles/2"
+          "url": "https://bbt21u.fun/articles/1",
+          "datePublished": "2024-10-05",
+          "author": {
+            "@type": "Person",
+            "name": "老赵讲讲"
+          }
         },
         {
           "@type": "BlogPosting",
-          "headline": "当文明开始计算自己：BBT、BTC 与智能货币的未来｜四论 BBT 之三", 
-          "url": "https://bbt21u.fun/articles/3"
+          "headline": "预测力，才是人类最稀缺的资源｜四论 BBT 之二",
+          "url": "https://bbt21u.fun/articles/2",
+          "datePublished": "2024-10-05",
+          "author": {
+            "@type": "Person",
+            "name": "老赵讲讲"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "当文明开始计算自己：BBT、BTC 与智能货币的未来｜四论 BBT 之三",
+          "url": "https://bbt21u.fun/articles/3",
+          "datePublished": "2024-10-05",
+          "author": {
+            "@type": "Person",
+            "name": "老赵讲讲"
+          }
         },
         {
           "@type": "BlogPosting",
           "headline": "挑战 BTC 的，不会是另一个 BTC，而是整个智能时代｜四论 BBT 之四",
-          "url": "https://bbt21u.fun/articles/4"
+          "url": "https://bbt21u.fun/articles/4",
+          "datePublished": "2024-10-05",
+          "author": {
+            "@type": "Person",
+            "name": "老赵讲讲"
+          }
         }
       ]
     }
@@ -159,6 +181,11 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <head>
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

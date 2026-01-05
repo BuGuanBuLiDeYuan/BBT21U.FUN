@@ -22,8 +22,95 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound()
   }
 
+  // Article-specific keywords
+  const getArticleKeywords = () => {
+    const commonKeywords = ["BBT", "BlindBox Token", "四论BBT", "老赵讲讲", "智能金融", "AI", "区块链", "加密货币"]
+    const specificKeywords: { [key: number]: string[] } = {
+      1: ["数字黄金", "数字智慧", "比特币", "BTC", "认知逻辑", "智能经济", "动态稀缺"],
+      2: ["预测力", "AI预测", "稀缺资源", "预测模型", "量化交易", "智能预测"],
+      3: ["智能货币", "通缩模型", "燃烧机制", "文明计算", "经济模型", "TradeFi"],
+      4: ["机器金融", "智能时代", "AI市场", "算法交易", "未来货币", "智能货币"],
+      5: ["BBT基础信息", "技术特性", "投资建议", "Solana", "pump.fun", "2100个BBT"]
+    }
+    return [...commonKeywords, ...(specificKeywords[articleId] || [])]
+  }
+
+  // JSON-LD Article Schema
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.id === 5
+      ? "BBT（BlindBox Token）完整基础信息概况，包含技术特性、价值主张、投资建议和核心概念解析。"
+      : `${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`,
+    "image": "https://bbt21u.fun/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "老赵讲讲",
+      "identifier": "BrotherZhaoSay",
+      "url": "https://bbt21u.fun"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BBT21U.fun",
+      "url": "https://bbt21u.fun",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bbt21u.fun/logo-21u.svg"
+      }
+    },
+    "datePublished": "2024-10-05T00:00:00.000Z",
+    "dateModified": "2024-10-05T00:00:00.000Z",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://bbt21u.fun/articles/${articleId}`
+    },
+    "keywords": getArticleKeywords().join(", "),
+    "articleSection": "智能金融",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "四论BBT系列文章"
+    }
+  }
+
+  // Breadcrumb Schema
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "WebPage",
+          "name": "首页",
+          "@id": "https://bbt21u.fun"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "WebPage",
+          "name": article.title,
+          "@id": `https://bbt21u.fun/articles/${articleId}`
+        }
+      }
+    ]
+  }
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* Back Button */}
       <Link
         href="/"
@@ -228,10 +315,23 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     return `${article.title}。探索BBT的崛起与TradeFi智能经济的未来。`
   }
 
+  // Article-specific keywords
+  const getArticleKeywords = () => {
+    const commonKeywords = ["BBT", "BlindBox Token", "四论BBT", "老赵讲讲", "智能金融", "AI", "区块链", "加密货币"]
+    const specificKeywords: { [key: number]: string[] } = {
+      1: ["数字黄金", "数字智慧", "比特币", "BTC", "认知逻辑", "智能经济", "动态稀缺"],
+      2: ["预测力", "AI预测", "稀缺资源", "预测模型", "量化交易", "智能预测"],
+      3: ["智能货币", "通缩模型", "燃烧机制", "文明计算", "经济模型", "TradeFi"],
+      4: ["机器金融", "智能时代", "AI市场", "算法交易", "未来货币", "智能货币"],
+      5: ["BBT基础信息", "技术特性", "投资建议", "Solana", "pump.fun", "2100个BBT"]
+    }
+    return [...commonKeywords, ...(specificKeywords[articleId] || [])]
+  }
+
   return {
     title: `${article.title} - BBT21U.fun`,
     description: getDescription(),
-    keywords: "BBT, 比特币, 棒棒糖, AI, 人工智能, Bull Bear Token, 加密货币, 四论BBT",
+    keywords: getArticleKeywords(),
     authors: [{ name: "老赵讲讲", url: "https://bbt21u.fun" }],
     creator: "老赵讲讲",
     publisher: "BBT21U.fun",
@@ -251,10 +351,11 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       ],
       locale: "zh_CN",
       type: "article",
-      publishedTime: "2025-10-05T00:00:00.000Z",
+      publishedTime: "2024-10-05T00:00:00.000Z",
+      modifiedTime: "2024-10-05T00:00:00.000Z",
       authors: ["老赵讲讲"],
       section: "智能金融",
-      tags: ["BBT", "比特币", "AI", "智能经济", "加密货币"],
+      tags: getArticleKeywords(),
     },
     alternates: {
       canonical: `https://bbt21u.fun/articles/${article.id}`,
